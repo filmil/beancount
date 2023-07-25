@@ -15,6 +15,7 @@ import unittest
 try:
   from experiments.v3.protos import expose_protos as ep
 except ImportError:
+  print("XXX: eek!")
   ep = None
 
 

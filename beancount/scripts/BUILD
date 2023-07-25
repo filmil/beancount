@@ -1,3 +1,5 @@
+load("@pypi//:requirements.bzl", "requirement")
+load("@pypi_tools//:requirements.bzl", requirement2 = "requirement")
 package(default_visibility = ["//visibility:public"])
 
 py_test(
@@ -125,6 +127,7 @@ py_test(
         "//beancount/scripts:example",
         "//beancount/utils:test_utils",
         "//beancount:plugins_for_tests",
+        requirement2("python-dateutil"),
     ],
 )
 
